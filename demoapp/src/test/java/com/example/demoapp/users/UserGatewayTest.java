@@ -22,6 +22,5 @@ public class UserGatewayTest {
         assertTrue(response.isPresent());
         assertEquals(1, response.get().getId());
         assertEquals("Bret", response.get().getUsername());
-
     }
 }
