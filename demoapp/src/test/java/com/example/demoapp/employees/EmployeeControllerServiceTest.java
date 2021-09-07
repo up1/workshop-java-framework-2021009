@@ -40,4 +40,10 @@ public class EmployeeControllerServiceTest {
         assertEquals("Mock name", result.getName());
     }
 
+    @Test
+    @DisplayName("Failure case :: Employee not found id = 100")
+    public void case02() {
+
+    }
+
 }
