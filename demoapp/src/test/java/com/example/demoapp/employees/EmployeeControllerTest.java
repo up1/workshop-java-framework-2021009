@@ -13,11 +13,16 @@ public class EmployeeControllerTest {
 
     @Autowired
     private TestRestTemplate restTemplate;
+    @Autowired
+    private EmployeeRepository employeeRepository;
 
     @Test
     public void getEmployeeById() {
         // Arrange
-        int id = 100;
+        int id = 1;
+        Employee employee100 = new Employee();
+        employee100.setName("somkiat");
+        employeeRepository.save(employee100);
         // Act
         EmployeeResponse result
                 = restTemplate.getForObject("/employees/" + id, EmployeeResponse.class);
