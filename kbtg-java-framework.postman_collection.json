@@ -41,6 +41,26 @@
 				}
 			},
 			"response": []
+		},
+		{
+			"name": "Get employee by id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/employees/100",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"employees",
+						"100"
+					]
+				}
+			},
+			"response": []
 		}
 	]
 }
