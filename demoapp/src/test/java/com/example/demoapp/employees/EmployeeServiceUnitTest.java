@@ -33,6 +33,18 @@ public class EmployeeServiceUnitTest {
 
     @Test
     public void employee_not_found_case() {
-
+        // Arrange
+        when(employeeRepository.findById(1)).thenReturn(Optional.empty());
+        // Act
+        EmployeeService employeeService = new EmployeeService(employeeRepository);
+        try {
+            employeeService.getById(1);
+            fail();
+        } catch (EmployeeNotFoundException e) {
+            // Pass
+            if(!"Employee not found id=1".equals(e.getMessage())) {
+                fail("Message fail with=" + e.getMessage());
+            }
+        }
     }
 }
