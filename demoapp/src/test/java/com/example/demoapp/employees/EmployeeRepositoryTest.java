@@ -33,5 +33,11 @@ public class EmployeeRepositoryTest {
         assertEquals("Mock name", result.get().getName());
     }
 
+    @Test
+    @DisplayName("ค้นหาข้อมูล employee id = 1 ไม่เจอ")
+    public void case02() {
+
+    }
+
 
 }
