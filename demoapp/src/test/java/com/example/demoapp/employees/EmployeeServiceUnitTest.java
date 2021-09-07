@@ -30,4 +30,9 @@ public class EmployeeServiceUnitTest {
         assertEquals(1, result.getId());
         assertEquals("Mock name", result.getName());
     }
+
+    @Test
+    public void employee_not_found_case() {
+
+    }
 }
