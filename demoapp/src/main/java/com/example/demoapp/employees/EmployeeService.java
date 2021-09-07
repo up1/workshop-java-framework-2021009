@@ -3,6 +3,7 @@ package com.example.demoapp.employees;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import javax.transaction.Transactional;
 import java.util.Optional;
 
 @Service
@@ -25,5 +26,11 @@ public class EmployeeService {
             return response;
         }
         throw new EmployeeNotFoundException("Employee not found id=" + id);
+    }
+
+    @Transactional
+    public void xxx() {
+        employeeRepository.save(null);
+        employeeRepository.deleteAll();
     }
 }
